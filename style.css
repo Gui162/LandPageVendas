@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    overflow: hidden; /*isso e para tirar as barras de rolagem */
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    background-color: rgb(29, 29, 29)
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+
+    -webkit-box-shadow: 3px 3px 49px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 49px 1px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 49px 1px rgba(0,0,0,0.75);
+
+}
+
+.menu .menu_logo{
+    font-size: 2rem;
+    color: orange;
+    cursor: pointer;
+}
+
+.menu .ul_menu{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+}
+
+.menu .ul_menu li{
+    list-style: none; /*isso e para tirar as bolinhas do li */
+}
+.menu .ul_menu li a{
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: orangered;
+    transition: all .3s ease-in; /*para fazer a transicao de cor para branco*/
+}
+
+.menu .ul_menu li a:hover{  /*para que quanto passar a mao em cima fique branco*/
+    color: white; 
+}
+
+/* Main */ 
+
+
+.main_content{
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* para deixar o conteuno principal em cima das coisas*/
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_image{
+    width: 45rem;
+    height: 30rem;
+    justify-self: end;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    border-radius: 10px; /* pra deixar a bordinha comida */
+    -webkit-box-shadow: 3px 3px 49px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 49px 1px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 49px 1px rgba(0,0,0,0.75);
+}
+
+.main_image img { /* isso e para quando a gente mexer no tamanho da caixa main_image a imagem mexer junto */
+    width: 100%;
+    height: 100%;
+}
+
+.main_text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.main_text h1{
+    height: 85px;
+    font-size: 2.5rem;
+    color: orangered;
+    text-align: center;
+}
+
+.main_text p {
+    height: 130px;
+    width: 800px;
+    color: rgb(194, 194, 194);
+    font-size: 1.4rem;
+    text-align:  center;
+    margin-bottom: 0;
+}
+
+.main_text input{
+    width: 570px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none; /* tira a borda de selecao do input quando vc clica */
+     padding-left: 10px; /* para dar um espaco no texto para nao ficar colado na borda */
+}
+
+.main_text button{
+    color: white;
+    background-color: orangered;
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 5px; /* pra deixar a bordinha comida */
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .3s ease-in; /*para fazer a transicao de cor para branco*/
+}
+
+.main_text button:hover{ /*para que quanto passar a mao em cima fique branco*/
+    background-color: white;
+    color: orangered;
+}
+
+
+/* tornando land para responsivo */
+
+
+@media (max-width: 800px){
+    .menu{
+        flex-direction: column;
+    }
+
+    html{
+        font-size: 60%;
+    }
+
+    .main_text p {
+        width: 500px;
+    }
+}
+
+@media (max-width: 700px){
+    .menu{
+        flex-direction: column;
+    }
+
+    html{
+        font-size: 60%;
+    }
+
+    .maix_text h1{
+        width: 450px;
+        text-align: center;
+    }
+    .main_text p {
+        width: 350px;
+    }
+
+    .main_text input{
+        width: 350px;
+        height: 40px;
+    }
+    .main_image {
+        height: 22rem;
+        width: 30rem;
+    }
+}
+
+@media (max-width: 300px){
+    .menu{
+        flex-direction: column;
+    }
+
+    html{
+        font-size: 50%;
+    }
+
+    .maix_text h1{
+        width: 300px;
+        text-align: center;
+    }
+    .main_text p {
+        width: 200px;
+        
+    }
+
+    .main_text input{
+        width: 200px;
+        height: 40px;
+    }
+
+    .main_text button{
+        height: 30;
+        width: 120;
+    }
+}
